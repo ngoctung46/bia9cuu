@@ -1,0 +1,35 @@
+<!-- <p>
+  menu works!
+</p>
+<ul *ngFor="let item of menuItems">
+  Item Name: {{ item.name }}
+  <ul>
+    <li *ngFor="let subItem of item.subItems">SubItem name: {{ subItem.name }}</li>
+  </ul>
+</ul> -->
+<div class="ui large top fixed inverted menu">
+  <div class="ui container">
+    <a *ngFor="let item of menuItems" class="item" routerLinkActive="active" [routerLink]="[item.url]">{{item.name}}</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Style 2 -->
+  
+<!-- <div class="ui container">
+  <div class="ui large secondary inverted pointing menu">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <a *ngFor="let item of menuItems" class="item" routerLinkActive="active" [routerLink]="[item.url]">{{item.name}}</a>
+    <a class="ui inverted button">Log in</a>
+    <a class="ui inverted button">Sign Up</a>
+  </div>
+</div> -->

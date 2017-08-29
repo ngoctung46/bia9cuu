@@ -1,0 +1,6 @@
+<div class="ui top attached tabular menu" *ngIf="categories">
+  <a *ngFor="let category of categories" class="item" [routerLink]="[category.name.toLowerCase()]" routerLinkActive="active">{{ category?.name }}</a>
+</div>
+<div class="ui bottom attached active tab segment">
+  <router-outlet></router-outlet>
+</div>
